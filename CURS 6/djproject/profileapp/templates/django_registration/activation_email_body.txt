@@ -1,0 +1,2 @@
+
+Pentru a activa contul, te rugam sa accesezi urmatorul link: http://{{site}}/accounts/activate/{{activation_key}}
