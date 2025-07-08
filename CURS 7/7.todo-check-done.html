@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> TODO List </h1>
+
+    <input type="text" name="task" id="">
+
+    <button onclick="adauga_task()"> Adauga </button>
+
+    <ol></ol>
+
+    <script>
+        var task_input = document.getElementsByName("task")[0];
+        var ol = document.getElementsByTagName("ol")[0];
+
+        function adauga_task() {
+            if (task_input.value.length < 3) {
+                alert("Task-ul trebuie sa aiba cel putin 3 caractere!");
+                return;
+            }
+            var new_list_item = document.createElement("li");
+            new_list_item.innerHTML = task_input.value;
+
+            task_input.value = ""; 
+
+            var check_button = document.createElement("button");
+            check_button.innerHTML = "✅";
+            check_button.onclick = function() {
+                new_list_item.style.textDecoration = new_list_item.style.textDecoration == "line-through" ? "none" : "line-through";
+            };
+
+            var delete_button = document.createElement("button");
+            delete_button.innerHTML = "❌";
+            delete_button.onclick = function() {
+                ol.remove();
+            };
+
+            new_list_item.appendChild(check_button);
+            new_list_item.appendChild(delete_button);
+
+            ol.appendChild(new_list_item);
+        }
+
+    </script>
+</body>
+
+</html>

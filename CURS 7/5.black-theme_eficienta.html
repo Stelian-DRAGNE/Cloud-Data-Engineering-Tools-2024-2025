@@ -10,30 +10,26 @@
             border-style: none;
             font-size: 25px;
         }
+        .darktheme {
+            background-color: black;
+        }
+        .darktheme * {
+            color: white;
+        }
     </style>
+
 </head>
-<body>
+<body class="">
     <h1> Acesta este un titlu </h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vel, porro labore explicabo neque aliquam aperiam hic provident voluptatem consequatur, amet eaque deleniti sequi maxime quam assumenda exercitationem. At eligendi est enim eum, corrupti facere aperiam dolores perferendis nemo similique non rem, porro inventore magnam laudantium error hic iure cupiditate?</p>
 
     <button onclick="schimba_tema()" id="tema">🌛</button>
     <script>
         var buton_tema = document.getElementById("tema");
-        var h1 = document.querySelector("h1");
-        var p = document.querySelector("p");
 
         function schimba_tema() {
-            if (buton_tema.innerHTML == "🌞") {
-                buton_tema.innerHTML = "🌛";
-                document.body.style.backgroundColor = "white";
-                h1.style.color = "black";
-                p.style.color = "black";
-            } else {
-                buton_tema.innerHTML = "🌞";
-                document.body.style.backgroundColor = "black";
-                h1.style.color = "white";
-                p.style.color = "white";
-            } 
+            document.body.className = document.body.className == "darktheme" ? "" : "darktheme";
+            buton_tema.innerHTML = buton_tema.innerHTML == "🌞" ? "🌛" : "🌞";
         }
     </script>
 </body>
