@@ -34,6 +34,14 @@
             background-color: white;
             margin: 0 3px;
         }
+
+        .option {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            margin: 10px;
+        }
     </style>
 </head>
 
@@ -42,20 +50,26 @@
 
         <h1> How do you want your project to be ? </h1>
 
-        <div class="toggle active">
-            <div class="switch"></div>
+        <div class="option">
+            <div class="toggle active">
+                <div class="switch"></div>
+            </div>
+            <label for="bun"> Good </label>
         </div>
-        <label for="bun"> Good </label>
 
-        <div class="toggle active">
-            <div class="switch"></div>
+        <div class="option">
+            <div class="toggle active">
+                <div class="switch"></div>
+            </div>
+            <label for="ieftin"> Cheap </label>
         </div>
-        <label for="ieftin"> Cheap </label>
 
-        <div class="toggle active">
-            <div class="switch"></div>
+        <div class="option">
+            <div class="toggle active">
+                <div class="switch"></div>
+            </div>
+            <label for="rapid"> Fast </label>
         </div>
-        <label for="rapid"> Fast </label>
 
     </main>
 
